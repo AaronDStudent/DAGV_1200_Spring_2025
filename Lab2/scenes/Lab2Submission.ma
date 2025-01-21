@@ -1,9 +1,10 @@
 //Maya ASCII 2025 scene
 //Name: Lab2Submission.ma
-//Last modified: Mon, Jan 20, 2025 11:04:46 PM
+//Last modified: Mon, Jan 20, 2025 11:42:35 PM
 //Codeset: 1252
 requires maya "2025";
-requires "mtoa" "5.4.2.1";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
+		 "mtoa" "5.4.2.1";
 requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.28.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -11,82 +12,80 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202404240506-c155a58772";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "34ECAA8A-4F1D-09E3-9231-63A6A1CACF03";
+fileInfo "UUID" "BCF3A202-41B5-5B6C-94EC-8C8857681FBC";
 createNode transform -s -n "persp";
 	rename -uid "29241043-4417-90AC-FC90-74AF3ED8D964";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.0161471938408297 9.8229621712543693 8.0575382741606631 ;
-	setAttr ".r" -type "double3" -35.264389682754661 45.000000000000028 -1.7991934265579786e-14 ;
-	setAttr ".rp" -type "double3" 1.2212453337051171e-15 -4.4408920985006262e-16 0 ;
-	setAttr ".rpt" -type "double3" -1.193743418795122e-15 5.9110849273806701e-16 5.1358207670710918e-17 ;
+	setAttr ".t" -type "double3" 12.605680202145377 12.439086288399169 12.93880382248134 ;
+	setAttr ".r" -type "double3" -28.664389682754717 44.200000000000031 2.2182365887199586e-15 ;
+	setAttr ".rp" -type "double3" 1.221245340322562e-15 -4.4408920985006262e-16 3.5527136788005009e-15 ;
+	setAttr ".rpt" -type "double3" 1.4793274119517215e-15 2.9785761721144394e-15 -1.8158283779751791e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E8032AAE-4A4D-47F7-2774-2893F5023C30";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 13.871791513908402;
+	setAttr ".coi" 20.380423869599319;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.097500026226048142 2.0650000572204572 -0.097500085830691141 ;
+	setAttr ".tp" -type "double3" -1.1920929132713809e-07 2.9950760269165038 1.7763568394002505e-15 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "32D4E386-4D08-02F1-F52A-BC9721721644";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.065000057220481619 1002.1650000572205 -0.065000057220442109 ;
+	setAttr ".t" -type "double3" -1.1920931218259154e-07 1002.1038802854396 1.7011559045305094e-14 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 	setAttr ".rpt" -type "double3" 2.2631810287421152e-14 -4.2376031158475283e-14 -1.7011559045305094e-14 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "E15572AD-4E99-0C16-C000-C780BAA172A5";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1;
-	setAttr ".ow" 9.8933498317358115;
+	setAttr ".coi" 999.10880425852304;
+	setAttr ".ow" 15.630546892640497;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
-	setAttr ".tp" -type "double3" -0.065000057220458984 2.065000057220459 -0.065000057220459123 ;
+	setAttr ".tp" -type "double3" -1.1920928955078125e-07 2.9950760269165357 -1.424887232292744e-30 ;
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
 	rename -uid "504B4848-49F8-03A5-8BA9-90895D7A0B08";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.065000057220458984 2.065000057220459 1000.1021338707565 ;
+	setAttr ".t" -type "double3" -1.1920951161793758e-07 2.9950760269165038 1000.1026271714385 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "A53B147C-4EF9-74F0-4FE8-29AAF190DF9A";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1671339279769;
-	setAttr ".ow" 11.017742821684585;
+	setAttr ".coi" 1000.1026271714385;
+	setAttr ".ow" 15.630546892640497;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" -0.065000057220458984 2.065000057220459 -0.065000057220458984 ;
+	setAttr ".tp" -type "double3" -1.1920951161793758e-07 2.9950760269165038 0 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
 	rename -uid "DB7CC72E-460E-59D3-FDF7-048AE067CA8C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1021338707565 2.065000057220459 -0.065000057220458984 ;
+	setAttr ".t" -type "double3" 1000.1026271714462 2.9950760269165038 0 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "8845172B-46B6-8FC0-9538-E882041DCF69";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1671339279769;
-	setAttr ".ow" 10.229585489420812;
+	setAttr ".coi" 1000.1026272906555;
+	setAttr ".ow" 15.630546892640499;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
-	setAttr ".tp" -type "double3" -0.065000057220458984 2.065000057220459 -0.065000057220458984 ;
+	setAttr ".tp" -type "double3" -1.1920928955078125e-07 2.9950760269165038 0 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "LivingRoom";
 	rename -uid "8E191A2D-44FC-5E33-2357-BB94C9DFBDF3";
-	setAttr ".rp" -type "double3" -0.065000057220458957 2.065000057220459 -0.065000057220458984 ;
-	setAttr ".sp" -type "double3" -0.065000057220458957 2.065000057220459 -0.065000057220458984 ;
 createNode mesh -n "LivingRoomShape" -p "LivingRoom";
 	rename -uid "2771525D-4EF2-9A29-C7CB-07AC300E117B";
 	setAttr -k off ".v";
@@ -105,7 +104,7 @@ createNode mesh -n "LivingRoomShape" -p "LivingRoom";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 0;
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
-	setAttr ".pv" -type "double2" 0.625 0.5 ;
+	setAttr ".pv" -type "double2" 0.375 0.25 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 28 ".uvst[0].uvsp[0:27]" -type "float2" 0.375 0 0.375 0.25
 		 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.125 0 0.125 0.25 0.375
@@ -115,12 +114,12 @@ createNode mesh -n "LivingRoomShape" -p "LivingRoom";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 14 ".pt[0:13]" -type "float3"  -1.5 0.63000011 1.4349999 
-		1.4350001 0.63000011 1.4349999 -1.5 3.6300001 1.4349999 -1.5 3.6300001 -1.5 1.4350001 
-		3.6300001 -1.5 -1.5 0.63000011 -1.5 1.4350001 0.63000011 -1.5 -1.5975001 3.5975001 
-		-1.5975001 1.4025 3.5975001 -1.5975001 1.4025 0.53250003 -1.5975001 -1.5975001 0.53250003 
-		-1.5975001 1.4025 0.53250003 1.4024999 -1.5975001 0.53250003 1.4024999 -1.5975001 
-		3.5975001 1.4024999;
+	setAttr -s 14 ".pt[0:13]" -type "float3"  -2.3157001 0.68855214 2.5081 
+		2.5081 0.68855214 2.5081 -2.3157001 5.4901519 2.5081 -2.3157001 5.4901519 -2.3157001 
+		2.5081 5.4901519 -2.3157001 -2.3157001 0.68855214 -2.3157001 2.5081 0.68855214 -2.3157001 
+		-2.4756002 5.4576521 -2.4756 2.4756 5.4576521 -2.4756 2.4756 0.53250003 -2.4756 -2.4756002 
+		0.53250003 -2.4756 2.4756 0.53250003 2.4756 -2.4756002 0.53250003 2.4756 -2.4756002 
+		5.4576521 2.4756;
 	setAttr -s 14 ".vt[0:13]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5
 		 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5 -0.53250003 0.53250003 -0.53250003 0.53250003 0.53250003 -0.53250003
 		 0.53250003 -0.53250003 -0.53250003 -0.53250003 -0.53250003 -0.53250003 0.53250003 -0.53250003 0.53250003
@@ -158,20 +157,20 @@ createNode mesh -n "LivingRoomShape" -p "LivingRoom";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "024A21C0-407B-1D4E-284D-E6BD4369A72F";
+	rename -uid "60776166-4205-AC7A-02B7-1E9426278016";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "1AF4970C-402F-3D45-662F-7DA24BF4318F";
+	rename -uid "AD8F5E5F-435D-7D92-376A-2EAB3BA5D7FF";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "68D1190B-472E-272C-FBC9-CDB0E3022324";
+	rename -uid "3E6CEDC9-4BAC-7400-7142-8D8FA87B1A9B";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "EEFE981E-4F5C-85FE-9BB4-F989407806BD";
+	rename -uid "F7AB68FC-4B77-7B5F-A84E-6A83A8BBBED2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "4B9A634D-4FC2-DE48-7865-71B16514AF20";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "3179D97C-499A-D0A6-7302-A481C54EAF4C";
+	rename -uid "9EC8478A-4359-9584-040E-CDAC9C5025A8";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3DD7B70E-4DFA-826D-C2C3-E085757CA003";
 	setAttr ".g" yes;
@@ -211,8 +210,6 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[3].x" 31.428571701049805;
 	setAttr ".tgi[0].ni[3].y" -145.71427917480469;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "07741883-4D5D-C65D-ACF8-AB84F4B30BEB";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "2637A1C3-44D3-EB3B-5E02-ECB5300E7C10";
 	setAttr ".b" -type "string" (
@@ -269,6 +266,23 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "5003AA17-46F1-9FAF-F1B5-3981E4C093FB";
 	setAttr ".b" -type "string" "playbackOptions -min 3 -max 240 -ast 3 -aet 240 ";
 	setAttr ".st" 6;
+createNode aiOptions -s -n "defaultArnoldRenderOptions";
+	rename -uid "3A24B451-4104-7FFC-E410-2997B4161CC1";
+	setAttr ".version" -type "string" "5.4.2.1";
+createNode aiAOVFilter -s -n "defaultArnoldFilter";
+	rename -uid "27087D25-4E36-064A-AF8B-BAABBED230D9";
+	setAttr ".ai_translator" -type "string" "gaussian";
+createNode aiAOVDriver -s -n "defaultArnoldDriver";
+	rename -uid "D0C6F063-4E49-D1FB-519E-7F8F1582B9E8";
+	setAttr ".ai_translator" -type "string" "exr";
+createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
+	rename -uid "435F4360-43DA-A303-C4C4-C193A1121523";
+	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
+createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
+	rename -uid "CB008DA7-4291-683D-6F54-3DA455A7D60B";
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "578F9FC9-4A78-2CFC-FDC8-E99FDE19544C";
 select -ne :time1;
 	setAttr ".o" 3;
 	setAttr ".unw" 3;
@@ -337,6 +351,12 @@ connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni
 		;
 connectAttr "PinkColor.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
+connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
+		;
+connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
+		 -na;
+connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
+connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "PinkColor.msg" ":defaultShaderList1.s" -na;

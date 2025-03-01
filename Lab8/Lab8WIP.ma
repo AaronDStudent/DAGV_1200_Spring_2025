@@ -1,6 +1,6 @@
 //Maya ASCII 2025 scene
-//Name: Challenge7WIPv5.ma
-//Last modified: Fri, Feb 28, 2025 11:57:22 PM
+//Name: Lab8WIP.ma
+//Last modified: Fri, Feb 28, 2025 11:59:44 PM
 //Codeset: 1252
 requires maya "2025";
 requires "stereoCamera" "10.0";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202404240506-c155a58772";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "D19A7EB4-468B-AEFE-CE86-09BC4FF7AC22";
+fileInfo "UUID" "975BCF10-44AF-57D5-8C78-969293BC9CE9";
 createNode transform -s -n "persp";
 	rename -uid "49B02B19-415F-702F-CE8F-08A21B24AC7F";
 	setAttr ".v" no;
@@ -89,7 +89,7 @@ createNode camera -s -n "sideShape" -p "side";
 createNode transform -n "ScenePOV";
 	rename -uid "95E8B676-4126-82A4-3411-CAAE15D868CF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28.412778569149371 14.211003965877223 33.960795336506663 ;
+	setAttr ".t" -type "double3" 16.002055482763375 9.9144668172820012 19.164427571337022 ;
 	setAttr ".r" -type "double3" -18.600000000000488 38.799999999988458 2.0405490458447389e-15 ;
 	setAttr ".s" -type "double3" 0.99999999999999978 1 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" -4.4408920985006252e-16 4.3298697960381105e-15 -8.8817841970012507e-15 ;
@@ -100,7 +100,7 @@ createNode camera -n "ScenePOVShape" -p "ScenePOV";
 	rename -uid "1F0947CB-49E0-4C94-6638-9F942202E770";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 46.726180837397649;
+	setAttr ".coi" 27.056269151806674;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -47940,6 +47940,8 @@ createNode transform -n "aiSkyDomeLight2";
 createNode aiSkyDomeLight -n "aiSkyDomeLightShape2" -p "aiSkyDomeLight2";
 	rename -uid "622C0F21-4F9C-5D35-7C1D-61A4F9F61B7D";
 	setAttr -k off ".v";
+	setAttr ".sc" -type "float3" 0.82700002 0.94676787 1 ;
+	setAttr ".intensity" 1.1538461446762085;
 createNode transform -n "directionalLight1";
 	rename -uid "D994C69B-48FE-2082-0CFE-23BB2CD4AA6C";
 	setAttr ".t" -type "double3" -3.1417330935641914 7.1790073766260676 -5.5829430417058656 ;
@@ -48301,7 +48303,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[15].y" -181.42857360839844;
 	setAttr ".tgi[0].ni[15].nvs" 1923;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "17FCFBC0-4D08-5ED7-9C7E-A7BABD16C1E2";
+	rename -uid "E69CD503-421D-F7C7-5766-DA8088498AA5";
 select -ne :time1;
 	setAttr ".o" 3;
 	setAttr ".unw" 3;
@@ -48726,4 +48728,4 @@ connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "aiSkyDomeLight2.iog" ":defaultLightSet.dsm" -na;
 connectAttr "directionalLight1.iog" ":defaultLightSet.dsm" -na;
-// End of Challenge7WIPv5.ma
+// End of Lab8WIP.ma

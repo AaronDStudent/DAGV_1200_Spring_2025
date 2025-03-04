@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: Lab8WIP.ma
-//Last modified: Mon, Mar 03, 2025 06:37:17 PM
+//Name: Challenge8WIP.ma
+//Last modified: Mon, Mar 03, 2025 06:39:02 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4D8F4B01-464B-FCD8-5F55-41AFC4DE98B9";
+fileInfo "UUID" "DEFA7CFE-46D4-B282-E907-7A9BDCE2D00A";
 createNode transform -s -n "persp";
 	rename -uid "49B02B19-415F-702F-CE8F-08A21B24AC7F";
 	setAttr ".v" no;
@@ -89,7 +89,7 @@ createNode camera -s -n "sideShape" -p "side";
 createNode transform -n "ScenePOV";
 	rename -uid "95E8B676-4126-82A4-3411-CAAE15D868CF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.6436587875276061 6.6600182638209438 7.2299185237809738 ;
+	setAttr ".t" -type "double3" 9.6436587875276025 6.6600182638209411 7.2299185237809702 ;
 	setAttr ".r" -type "double3" -31.200000000000628 39.199999999988535 2.0521177502541827e-15 ;
 	setAttr ".s" -type "double3" 0.99999999999999978 1 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" -4.4408920985006252e-16 4.3298697960381105e-15 -8.8817841970012507e-15 ;
@@ -100,7 +100,7 @@ createNode camera -n "ScenePOVShape" -p "ScenePOV";
 	rename -uid "1F0947CB-49E0-4C94-6638-9F942202E770";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 13.369886909253138;
+	setAttr ".coi" 13.369886909253129;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -48251,7 +48251,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].vl" -type "double2" -719.54070183941769 -770.7311759957671 ;
 	setAttr ".tgi[0].vh" -type "double2" 728.078288256419 548.31639063761031 ;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "75BBC4C8-4F1B-3345-A201-2DB7AD99E586";
+	rename -uid "A00BD048-4D55-7154-208E-C29B3A83090D";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 3;
@@ -48643,4 +48643,4 @@ connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "directionalLight1.iog" ":defaultLightSet.dsm" -na;
-// End of Lab8WIP.ma
+// End of Challenge8WIP.ma

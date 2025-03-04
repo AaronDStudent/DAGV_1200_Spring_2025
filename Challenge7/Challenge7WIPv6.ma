@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Challenge7WIPv6.ma
-//Last modified: Mon, Mar 03, 2025 06:52:52 PM
+//Last modified: Mon, Mar 03, 2025 07:02:27 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4D97695A-4CBD-1EF7-AA0A-5790C83975CA";
+fileInfo "UUID" "E3048E6C-4A1E-0684-BA53-5C81AFC76BBE";
 createNode transform -s -n "persp";
 	rename -uid "49B02B19-415F-702F-CE8F-08A21B24AC7F";
 	setAttr ".v" no;
@@ -55,13 +55,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "2856F68F-4FE3-7A30-8784-23A5975C4A62";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.861318328003881 0.13780041572559051 1000.1 ;
+	setAttr ".t" -type "double3" 1.986191514470649 -0.032089581523108535 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "C1AF39EA-4CF6-8E98-4536-62AB4761AF74";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 1.1564203363876291;
+	setAttr ".ow" 9.0422074423064274;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -47978,14 +47978,14 @@ createNode nurbsCurve -n "LaddercurvevShape2" -p "Laddercurvev2";
 		10
 		1.5132311813350241 -0.0048483997258427095 0
 		1.5112466517587722 0.055710324361266481 0
-		1.5213054359589504 0.21619422673808764 0
-		1.5453289653258835 0.29870800581745283 0
+		1.5213054359589504 0.16183633374640222 0
+		1.5453289653258835 0.23996641177805084 0
 		1.6222666333820615 0.34584770486826188 0
 		1.8177962715825784 0.34320460992583113 0
 		1.8830780361158708 0.29521807450834503 0
-		1.9320092458145011 0.22404118578061982 0
-		1.9496652754213177 0.077574642020053139 0
-		1.9683151598536703 -1.1272295164963388 0
+		1.9355162066526743 0.22404118578061982 0
+		1.9461583145831445 0.077574642020053139 0
+		1.9548470014810966 -1.1272295164963388 0
 		;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "103C7900-4902-CB97-FD7A-7BA1F7A5F2B4";
@@ -48294,7 +48294,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].vl" -type "double2" -719.54070183941769 -770.7311759957671 ;
 	setAttr ".tgi[0].vh" -type "double2" 728.078288256419 548.31639063761031 ;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "D73F8590-4377-BF37-A2A2-8998E5502E7C";
+	rename -uid "6B380569-4B78-ED03-31DC-C3BAE19C8B5B";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 3;

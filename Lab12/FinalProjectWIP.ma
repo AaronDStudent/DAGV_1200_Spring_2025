@@ -1,6 +1,6 @@
 //Maya ASCII 2025 scene
 //Name: FinalProjectWIP.ma
-//Last modified: Wed, Apr 02, 2025 11:30:14 PM
+//Last modified: Wed, Apr 02, 2025 11:31:01 PM
 //Codeset: 1252
 requires maya "2025";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202404240506-c155a58772";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "FF611076-40D2-536F-755A-74987CD744E7";
+fileInfo "UUID" "81DCA9C3-4B7C-0D23-199F-1D8CCEB61AC6";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "7FD3C6FE-4FF6-000F-C399-28BF0A007741";
@@ -3478,7 +3478,7 @@ createNode polyCube -n "polyCube13";
 	rename -uid "BB10CCFE-4396-D3F9-D9FD-8FBC79EDD5F8";
 	setAttr ".cuv" 4;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "0F76860A-40AB-F0F4-2F70-BDB5941BDA1D";
+	rename -uid "D47C8D21-4268-1F59-A24D-C598BBDD42FC";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
